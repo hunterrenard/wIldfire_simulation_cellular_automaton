@@ -105,7 +105,7 @@ def runsim(
 	SURVIVED_HOUSES = list(cube[-1, :, NUM_GEN - 2]).count(HOUSE)
 	
 	#RETURN frac of houses that burn down
-	return SURVIVED_HOUSES / HOUSE_COUNT
+	return 1 - (SURVIVED_HOUSES / HOUSE_COUNT)
 
 def parameterSweep(sweep_count = 50):
 	burn_range = np.arange(1, 11, 1)
